@@ -1,0 +1,16 @@
+class Solution {
+    public int solution(int[] arr1, int[] arr2) {
+        if (arr1.length == arr2.length) {
+            int sum1 = 0, sum2 = 0;
+            
+            for (int i=0; i<arr1.length; i++) {
+                sum1 += arr1[i];
+                sum2 += arr2[i];
+            }
+            
+            return (sum1 > sum2) ? 1 : (sum1 < sum2) ? -1 : 0;   
+        } else {
+            return (arr1.length > arr2.length) ? 1 : -1;   
+        }
+    }
+}
